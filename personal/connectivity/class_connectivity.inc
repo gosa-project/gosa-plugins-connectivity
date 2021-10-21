@@ -15,6 +15,7 @@ class connectivity extends plugin
   var $plHeadline= "Connectivity";
   var $plDescription= "Manage connectivity user settings";
   var $plIcon = "plugins/connectivity/images/plugin.png";
+  var $matIcon = "cable";
 
   /* attribute list for save action */
   var $attributes= array();
@@ -35,7 +36,7 @@ class connectivity extends plugin
     $ui= get_userinfo();
 
     $this->config = $config;
-  
+
     /* Load accounts */
     foreach ($config->data['TABS']['CONNECTIVITY'] as $plug){
       if (!class_available($plug['CLASS']) || !plugin_available($plug['CLASS'])) {
@@ -46,8 +47,8 @@ class connectivity extends plugin
       $this->plugin_name[]= $name;
       $this->plugin[$name]= new $name($config, $dn,$parent);
 
-      /* Acl base && category configuration, 
-          these settings will be overloaded in main.inc, 
+      /* Acl base && category configuration,
+          these settings will be overloaded in main.inc,
           if we are editing ourself */
       $this->plugin[$name]-> set_acl_category("users");
       $this->plugin[$name]-> set_acl_base($this->dn);
@@ -68,6 +69,8 @@ class connectivity extends plugin
 
     /* Prepare templating */
     $smarty= get_smarty();
+
+    $theme = getThemeName();
 
     /* Do we represent a valid account? */
     if ($this->parent === NULL){
@@ -95,15 +98,29 @@ class connectivity extends plugin
     /* Execude  objects */
     $is_first= true;
 
+    $display.= "<div class='connectivity-wrapper'>";
+    $display.= "<h2>"._(Preferences)."</h2>";
+
     foreach ($this->plugin_name as $name){
       $this->plugin[$name]->read_only = &$this->read_only;
       if (!$is_first){
-        $display.= '<hr>';
+        switch ($theme) {
+          case 'classic':
+            $display.= "<hr>";
+            break;
+
+          default:
+            $display.= "<hr class='divider'>";
+            break;
+        }
       } else {
         $is_first= false;
       }
+
       $display.= $this->plugin[$name]->execute();
     }
+
+    $display.= "</div>";
 
     /* Mark me as connectivity tab */
     $display.= "<input type='hidden' name='connectivityTab'>";
@@ -164,7 +181,7 @@ class connectivity extends plugin
     /* Save objects */
     foreach ($this->plugin_name as $name){
       $this->plugin[$name]->dn= $this->dn;
-      
+
       if ($this->plugin[$name]->is_account){
         $this->plugin[$name]->save();
       } else {
@@ -198,10 +215,10 @@ class connectivity extends plugin
     }
   }
 
-  /* Prepare the connectivity obj 
+  /* Prepare the connectivity obj
    */
   function PrepareForCopyPaste($obj)
-  { 
+  {
     $tmp = $this->plugin;
     plugin::PrepareForCopyPaste($obj);
     $this->plugin = $tmp;
@@ -214,23 +231,23 @@ class connectivity extends plugin
   function enable_multiple_support()
   {
     plugin::enable_multiple_support();
-    
+
     foreach($this->plugin_name as $key => $name){
       if($this->plugin[$name]->multiple_support){
-        $this->plugin[$name]->enable_multiple_support();  
+        $this->plugin[$name]->enable_multiple_support();
       }else{
         unset($this->plugin_name[$key]);
         unset($this->plugin[$name]);
       }
     }
   }
-  
-  
+
+
   function multiple_execute()
   {
     return($this->execute());
   }
-  
+
   /* Save data to object */
   function multiple_save_object()
   {

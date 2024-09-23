@@ -108,7 +108,7 @@ class intranetAccount extends plugin
             new log("remove", "users/" . get_class($this), $this->dn, array_keys($this->attrs), $ldap->get_error());
 
             if (!$ldap->success()) {
-                msg_dialog::display(_("LDAP error"), msgPool::ldaperror($ldap->get_error(), $this->dn, LDAP_DEL, get_class()));
+                msg_dialog::display(_("LDAP error"), msgPool::ldaperror($ldap->get_error(), $this->dn, LDAP_DEL, __CLASS__));
             }
 
             /* Optionally execute a command after we're done */
@@ -161,7 +161,7 @@ class intranetAccount extends plugin
         }
 
         if (!$ldap->success()) {
-            msg_dialog::display(_("LDAP error"), msgPool::ldaperror($ldap->get_error(), $this->dn, LDAP_MOD, get_class()));
+            msg_dialog::display(_("LDAP error"), msgPool::ldaperror($ldap->get_error(), $this->dn, LDAP_MOD, __CLASS__));
         }
     }
 
@@ -179,7 +179,7 @@ class intranetAccount extends plugin
 
             "plRequirements" => array(
                 'ldapSchema' => array('gosaIntranetAccount' => '>=2.7'),
-                'onFailureDisablePlugin' => array(get_class())
+                'onFailureDisablePlugin' => array(__CLASS__)
             ),
 
             "plDescription"       => _("Intra-net account settings") . "&nbsp;(" . _("Connectivity add-on") . ")",

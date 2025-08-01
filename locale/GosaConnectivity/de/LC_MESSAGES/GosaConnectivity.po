@@ -1,0 +1,61 @@
+# German translations for gosa package
+# German translation for gosa.
+# Copyright (C) 2025 GONICUS GmbH, Germany
+# This file is distributed under the same license as the gosa package.
+# Alfred Schroeder <schroeder@GONICUS.de>, 2004.
+# Cajus Pollmeier <pollmeier@gonicus.de>, 2004, 2005, 2006.
+# Jan Wenzel <jan.wenzel@gonicus.de>, 2004,2005, 2008.
+# Stefan Koehler <stefan.koehler@GONICUS.de>, 2005.
+# Fabian Hickert <fabian.hickert@gonicus.de>, 2010.
+# Lennard Rischen <lennard.rischen@gonicus.de>, 2025.
+#
+#: src/personal/connectivity/Connectivity.php:99
+msgid ""
+msgstr ""
+"Project-Id-Version: gosa 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-01 09:22+0200\n"
+"PO-Revision-Date: 2025-08-01 09:42+0200\n"
+"Last-Translator: Lennard Rischen <lennard.rischen@gonicus.de>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/personal/connectivity/classic/intranet.tpl:4
+#: src/personal/connectivity/default/intranet.tpl:8
+msgid "Intra net account"
+msgstr "Intranet-Konto"
+
+#: src/personal/connectivity/Connectivity.php:115
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: src/personal/connectivity/Connectivity.php:317
+msgid "Connectivity"
+msgstr "Konnektivität"
+
+#: src/personal/connectivity/Connectivity.php:320
+#: src/personal/connectivity/IntranetAccount.php:183
+msgid "My account"
+msgstr "Mein Konto"
+
+#: src/personal/connectivity/Connectivity.php:324
+#: src/personal/connectivity/IntranetAccount.php:192
+msgid "Connectivity add-on"
+msgstr "Konnektivitäts-Erweiterung"
+
+#: src/personal/connectivity/IntranetAccount.php:118
+#: src/personal/connectivity/IntranetAccount.php:171
+msgid "LDAP error"
+msgstr "LDAP-Fehler"
+
+#: src/personal/connectivity/IntranetAccount.php:180
+msgid "Intra-net"
+msgstr "Intranet"
+
+#: src/personal/connectivity/IntranetAccount.php:192
+msgid "Intra-net account settings"
+msgstr "Intranet-Konto Einstellungen"

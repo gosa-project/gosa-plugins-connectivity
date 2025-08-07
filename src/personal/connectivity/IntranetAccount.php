@@ -82,7 +82,7 @@ class IntranetAccount extends Plugin
 
         $smarty->assign("use_intranet", in_array_strict("intranet", $this->multi_boxes));
         $smarty->assign("multiple_support", $this->multiple_support_active);
-        $display .= $smarty->fetch(get_template_path('intranet.tpl', TRUE, dirname(__FILE__)));
+        $display .= $this->smartyFetch(get_template_path('intranet.tpl', TRUE, dirname(__FILE__)), 'GosaConnectivity');
         return ($display);
     }
 

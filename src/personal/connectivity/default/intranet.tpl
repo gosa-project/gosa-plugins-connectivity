@@ -5,7 +5,7 @@
                 <label>
                     <p>
                         <input type="checkbox" name="intranet" value="B" {$intranetState}>
-                        <span>{t domain="GosaConnectivity"}Intra net account{/t}</span>
+                        <span>{t}Intra net account{/t}</span>
                     </p>
                 </label>
             {/render}

@@ -1,0 +1,55 @@
+# Chinese translations for gosa package.
+# Copyright (C) 2025 GONICUS GmbH, Germany
+# This file is distributed under the same license as the gosa package.
+# Jiang Xin <worldhello.net@gmail.com>, 2007.
+# Lennard Rischen <lennard.rischen@gonicus.de>, 2025.
+#
+#: src/personal/connectivity/Connectivity.php:99
+msgid ""
+msgstr ""
+"Project-Id-Version: gosa 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-01 09:22+0200\n"
+"PO-Revision-Date: 2025-08-01 11:37+0200\n"
+"Last-Translator: Lennard Rischen <lennard.rischen@gonicus.de>\n"
+"Language-Team: Chinese\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/personal/connectivity/classic/intranet.tpl:4
+#: src/personal/connectivity/default/intranet.tpl:8
+msgid "Intra net account"
+msgstr "内联网账号"
+
+#: src/personal/connectivity/Connectivity.php:115
+msgid "Preferences"
+msgstr "設定"
+
+#: src/personal/connectivity/Connectivity.php:317
+msgid "Connectivity"
+msgstr "互联"
+
+#: src/personal/connectivity/Connectivity.php:320
+#: src/personal/connectivity/IntranetAccount.php:183
+msgid "My account"
+msgstr "我的账号"
+
+#: src/personal/connectivity/Connectivity.php:324
+#: src/personal/connectivity/IntranetAccount.php:192
+msgid "Connectivity add-on"
+msgstr "互联"
+
+#: src/personal/connectivity/IntranetAccount.php:118
+#: src/personal/connectivity/IntranetAccount.php:171
+msgid "LDAP error"
+msgstr "LDAP 错误:"
+
+#: src/personal/connectivity/IntranetAccount.php:180
+msgid "Intra-net"
+msgstr "内联网"
+
+#: src/personal/connectivity/IntranetAccount.php:192
+msgid "Intra-net account settings"
+msgstr "内联网账号"

@@ -1,0 +1,5 @@
+The Connectivity Plugin for GOsa is developed by GONICUS
+
+  Cajus Pollmeier <pollmeier@gonicus.de>
+  Benjamin Zapiec <zapiec@gonicus.de>
+  Lennard Rischen <lennard.rischen@gonicus.de>
